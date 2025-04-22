@@ -1,4 +1,4 @@
-# bored-with-${\color{#FF0000}faults}$-and-${\color{#FF0000}leaks}$ 🧱
+# ${bored-with- \color{#FF0000}faults \color{#000000FF}-and- \color{#FF0000}leaks}$ 🧱
 
 Efforts to develop secure constructs within the constraints of C's syntax.
 
