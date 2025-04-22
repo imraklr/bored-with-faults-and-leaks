@@ -12,5 +12,4 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # add executable for testing out the code that I have been typing till now
 add_executable(App
     "${CMAKE_CURRENT_SOURCE_DIR}/src/main.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/ingredients/ingredients.c"
 )

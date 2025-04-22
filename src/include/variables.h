@@ -10,7 +10,7 @@
  */
 #pragma once
 
-#include "ingredients.h"
+#include "foundational_macros.h"
 
 // constant creation technique ( do not use incomplete types like void ), recommended use: without scope
 #define let(type, variable, value) const type variable = value;

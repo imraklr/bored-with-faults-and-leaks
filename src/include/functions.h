@@ -1,15 +1,17 @@
 /**
- * @file scopes.h
+ * @file functions.h
  * @author Rakesh Kumar (rklsspty777@gmail.com)
- * @brief All code related to scopes and function-like scopes.
+ * @brief Functions related secure constructs.
  * @version 0.1.0
- * @date 2025-04-20
+ * @date 2025-04-22
  * 
  * 
  */
 #pragma once
 
-#include "basic_types.h"
+
+// using macro to define function in global scope
+#define fn(return_type, name, ...) return_type name (struct fn_var_ref **tos, ##__VA_ARGS__)
 
 /**
  * @brief Encapsulates repetitive code blocks. In multithreaded contexts requiring function pointers, dedicated functions are necessary. However, for individual 
@@ -35,3 +37,11 @@
  * 
  */
 #define lexical_scope(unit) { unit }
+
+/**
+ * @brief Special return macro used within a function to return a specific dynamically allocated 
+ * pointer which was registered onto the stack based linked list within the function.
+ * 
+ */
+#define lexical_return(p_fn_var_ref, p_ref) { \
+}
