@@ -12,17 +12,17 @@
 
 #include "include/foundations.h"
 
-void func_to_use(struct fn_var_ref **tos) {
-	int *p = (int*)malloc(sizeof(int));
-	reg_fn_var_ref(tos, p);
-	*p = 24;
-	printf("Address of p = %p\n", p);
-}
+void func_to_use(struct val_wrapper **tos) {}
 
 
 int main() {
 
-	owner_void_scope(func_to_use)
+	// TODO: Mind the point 3 from the pen-paper notes
+	lexical_scope(func_to_use, {
+		int *p = (int*)malloc(sizeof(int)); *p = 24;
+		// reg_fn_var_ref(tos, p); // give scope alternative
+		printf("Address of p = %p\n", p);
+	})
 
 	return 0;
 }

@@ -21,7 +21,7 @@
  * @note It is highly recommended to not ship the reference to top-of-stack to any other function manually within this function.
  */
 #define lexical_function(return_type, function_name, unit_of_code, ...) return_type function_name(__VA_ARGS__) { \
-    struct fn_var_ref tos = {}; \
+    struct val_wrapper tos = {}; \
     unit_of_code; \
     /* write freeing logic here */ \
 }
@@ -31,12 +31,6 @@
  * 
  */
 #define lexical_labelled_scope(fn_name, unit, ...) fn_name: { unit }
-
-/**
- * @brief Macro to create a non-labeled lexical scope with unit code inside it.
- * 
- */
-#define lexical_scope(unit) { unit }
 
 /**
  * @brief Special return macro used within a function to return a specific dynamically allocated 

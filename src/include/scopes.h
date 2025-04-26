@@ -1,7 +1,7 @@
 /**
  * @file scopes.h
  * @author Rakesh Kumar (rklsspty777@gmail.com)
- * @brief All code related to scopes and function-like scopes.
+ * @brief All code related to scopes.
  * @version 0.1.0
  * @date 2025-04-20
  * 
@@ -9,31 +9,25 @@
  */
 #pragma once
 
+#include "stack_store.h"
 #include "foundational_macros.h"
 
+
 /**
- * @brief An ownership scope handles the references owned within it by the calling function.
- * There is one and only one scope per function. Do not nest scope using this macro. If a nested scope is defined 
- * within this macro then you might bug your program.
- * 
- * @note An ownership scope can't output anything i.e. the expression(s) within an ownership scope cannot be assigned 
- * to a variable (initialized with mut macro) or a constant (initialized with let macro).
+ * @brief Macro to create a non-labeled lexical scope with unit code inside it.
  * 
  */
-#define owner_result_scope(result_store, function, ...) { \
-    struct fn_var_ref *p_tos = &tos; \
-    struct fn_var_ref **pp_tos = &p_tos; \
-	result_store = function(pp_tos, ##__VA_ARGS__); \
-	pop_fn_var_stack_all_(pp_tos); \
+#define lexical_scope(scope_name, scope_code) { \
+	struct val_wrapper *p_tos_of_##scope_name = NULL; \
+	struct val_wrapper **pp_tos_of_##scope_name = &p_tos_of_##scope_name; \
+	scope_code \
+	pop_fn_var_stack_all(pp_tos_of_##scope_name) \
 }
 
-#define owner_void_scope(function, ...) { \
-    struct fn_var_ref *p_tos = NULL; \
-    struct fn_var_ref **pp_tos = &p_tos; \
-	function(pp_tos, ##__VA_ARGS__); \
-	pop_fn_var_stack_all_(pp_tos); \
-}
-
+/**
+ * @brief Macro to nest scopes.
+ * 
+ */
 #define scope_nest(scope_nest) { \
 	scope_nest; \
 	/* free the referenced pointers */ \
