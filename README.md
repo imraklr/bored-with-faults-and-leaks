@@ -1,6 +1,4 @@
 # ${bored-with- \color{#FF0000}faults \color{#000000FF}-and- \color{#FF0000}leaks}$
-❗❗❗I decided not to proceed with this project because I don't want to re-invent the wheel and the efforts put into making a memory-safe C around macros are worthless when compared to already available memory-safe language such as Rust.
-
 Efforts to develop secure constructs within the constraints of C's syntax.
 
 ## ${\color{#44A0FF} Hitherto} $
@@ -21,6 +19,6 @@ Efforts to develop secure constructs within the constraints of C's syntax.
 
 ## ${\color{#333333} Comments} $
 
-I have been obsessing over this project. I tried to come close to a safe implementation in C for C programs and I think I need more time to figure out.
+❗❗❗I decided not to proceed with this project because I don't want to re-invent the wheel and the efforts put into making a memory-safe C around macros are worthless when compared to already available memory-safe language such as Rust.
 
 ...C is fantastic for what it's designed for, and Rust is great in its own right. I'm a fan of both.
