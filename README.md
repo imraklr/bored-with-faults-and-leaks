@@ -1,4 +1,5 @@
-# ${bored-with- \color{#FF0000}faults \color{#000000FF}-and- \color{#FF0000}leaks}$ 🧱
+# ${bored-with- \color{#FF0000}faults \color{#000000FF}-and- \color{#FF0000}leaks}$
+❗❗❗I decided not to proceed with this project because I don't want to re-invent the wheel and the efforts put into making a memory-safe C around macros are worthless when compared to already available memory-safe language such as Rust.
 
 Efforts to develop secure constructs within the constraints of C's syntax.
 
