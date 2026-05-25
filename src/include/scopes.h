@@ -1,6 +1,6 @@
 /**
  * @file scopes.h
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief All code related to scopes.
  * @version 0.1.0
  * @date 2025-04-20

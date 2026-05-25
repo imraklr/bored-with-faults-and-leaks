@@ -1,6 +1,6 @@
 /**
  * @file main.c
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief Sample executable program to test out the secure contructs.
  * @version 0.1.0
  * @date 2025-04-22

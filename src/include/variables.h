@@ -1,6 +1,6 @@
 /**
  * @file variables.h
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief This file contains code for creating variables, both constant and mutable variables for use in both 
  * scoped and non-scoped code.
  * @version 0.1.0

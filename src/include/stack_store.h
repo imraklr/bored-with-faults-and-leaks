@@ -1,6 +1,6 @@
 /**
  * @file stack_store.h
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief All the code for storing stack nodes in scopes and functions and other related operations are 
  * placed in this file.
  * @version 0.1.0

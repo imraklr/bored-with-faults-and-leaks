@@ -1,6 +1,6 @@
 /**
  * @file functions.h
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief Functions related secure constructs.
  * @version 0.1.0
  * @date 2025-04-22

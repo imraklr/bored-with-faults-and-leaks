@@ -1,6 +1,6 @@
 /**
  * @file foundational_macros.h
- * @author Rakesh Kumar (rklsspty777@gmail.com)
+ * @author Rakesh Kumar
  * @brief This file contains all the basic types needed by this project.
  * @version 0.1.0
  * @date 2025-04-17
